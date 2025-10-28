@@ -1,0 +1,90 @@
+{
+  "name": "retro-c64",
+  "displayName": "RetroC64",
+  "description": "Debugger Extension for RetroC64",
+  "version": "1.0.0",
+  "publisher": "xoofx",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/RetroC64/retro-c64-vscode"
+  },
+  "bugs": {
+      "url": "https://github.com/RetroC64/RetroC64/issues"
+  },
+  "homepage": "https://github.com/RetroC64/RetroC64",  
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Debuggers"
+  ],
+  "keywords": [
+      "C64",
+      "emulator",
+      "debugger",
+      "dotnet"
+  ],
+  "license": "BSD2-clause",
+  "icon": "res/RetroC64_128.png",
+  "contributes": {
+    "breakpoints": [
+      {
+        "language": "cs"
+      },
+      {
+        "language": "vb"
+      },
+      {
+        "language": "fs"
+      }
+    ],
+    "debuggers": [
+      {
+        "type": "RetroC64",
+        "label": "RetroC64 Debugger",
+        "runtime": "node",
+        "configurationAttributes": {
+          "attach": {
+            "required": [
+              "debugServer"
+            ],
+            "properties": {
+              "debugServer": {
+                "type": "number",
+                "description": "Port of the debug adapter server to connect to.",
+                "default": 6503
+              }
+            }
+          }
+        },
+        "initialConfigurations": [
+          {
+            "name": "RetroC64: Connect to a RetroC64 Application",
+            "type": "RetroC64",
+            "request": "attach",
+            "debugServer": 6503
+          }
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.105.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.45.0",
+    "@typescript-eslint/parser": "^8.45.0",
+    "eslint": "^9.36.0",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}

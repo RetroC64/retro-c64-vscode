@@ -1,0 +1,6 @@
+# git ignores
+node_modules
+build
+.vscode/settings.json
+dist
+*~
