@@ -2,16 +2,16 @@
   "name": "retro-c64",
   "displayName": "RetroC64",
   "description": "Debugger Extension for RetroC64",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "xoofx",
   "repository": {
       "type": "git",
-      "url": "https://github.com/RetroC64/retro-c64-vscode"
+      "url": "https://github.com/RetroC64/retro-c64-vscode" 
   },
   "bugs": {
-      "url": "https://github.com/RetroC64/RetroC64/issues"
+      "url": "https://github.com/RetroC64/retro-c64-vscode/issues"
   },
-  "homepage": "https://github.com/RetroC64/RetroC64",  
+  "homepage": "https://github.com/RetroC64/retro-c64-vscode",  
   "engines": {
     "vscode": "^1.105.0"
   },
