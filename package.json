@@ -2,7 +2,7 @@
   "name": "retro-c64",
   "displayName": "RetroC64",
   "description": "Debugger Extension for RetroC64",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "xoofx",
   "repository": {
       "type": "git",
