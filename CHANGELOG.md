@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.4] - Patch update
+
+Logo updated (removing white background).
+
 ## [1.0.3] - Patch update
 
 Logo updated.
